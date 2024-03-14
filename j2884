@@ -1,0 +1,26 @@
+# H,M=map(int,input().split())
+
+# if H!=0 and M>45:
+#    print(H,(M-45))
+# elif M == 45:
+#    print(H, 0)
+# elif M<45 and 0<M>15 :
+#    print((H-1),(M+15))
+# elif M<45 and 0<M<15:
+#    print((H-1),(M+45))  
+# elif M==0 and H!=0:
+#    print((H-1),(M+15))
+# elif H==0 :
+#    print((H+23),(M+15))
+
+
+H,M=map(int,input().split())
+
+M -= 45
+
+if M < 0 :
+    H -= 1
+    M += 60
+if H < 0:
+    H += 24
+print(H, M)
